@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ветклиника Дядя Фёдор | Тольятти</title>
+    <meta name="description" content="Ветеринарная клиника в Тольятти. Лечение, диагностика и скорая помощь для кошек и собак. Приём по записи — без очередей.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐾</text></svg>">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- SCROLL PROGRESS BAR -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- CURSOR SPOTLIGHT -->
+    <div class="cursor-spotlight" id="cursorSpotlight"></div>
+
+    <!-- НАВИГАЦИЯ -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Дядя Фёдор <i data-lucide="paw-print" class="paw-icon"></i></a>
+            
+            <nav class="nav-links">
+                <a href="#services">Услуги</a>
+                <a href="#services">Цены</a>
+                <a href="#approach">О клинике</a>
+                <a href="#reviews">Отзывы</a>
+                <a href="#contacts">Контакты</a>
+            </nav>
+            
+            <div class="nav-actions">
+                <a href="tel:+79370640843" class="nav-phone">+7 (937) 064-08-43</a>
+                <button type="button" class="btn btn-primary btn-pill open-booking-modal">Записаться</button>
+                <button class="hamburger" id="hamburger" aria-label="Меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- МОБИЛЬНОЕ МЕНЮ -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+    <nav class="mobile-nav" id="mobileNav">
+        <a href="#services">Услуги</a>
+        <a href="#services">Цены</a>
+        <a href="#approach">О клинике</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#contacts">Контакты</a>
+        <a href="tel:+79370640843" class="mobile-phone">+7 (937) 064-08-43</a>
+    </nav>
+
+    <!-- СЕКЦИЯ 1: HERO -->
+    <section class="hero">
+        <!-- Animated gradient blobs -->
+        <div class="hero-blob hero-blob-1"></div>
+        <div class="hero-blob hero-blob-2"></div>
+        <div class="hero-blob hero-blob-3"></div>
+
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="badge" data-aos="fade-up" data-aos-delay="0">ТОЛЬЯТТИ • АВТОЗАВОДСКИЙ РАЙОН</span>
+                <h1 data-aos="fade-up" data-aos-delay="150">Ветеринарная клиника, которая <span class="hero-highlight">приедет сама</span></h1>
+                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="300">Лечение, диагностика и скорая помощь для кошек и собак. Приём по записи — без очередей.</p>
+                
+                <div class="hero-rating" data-aos="fade-up" data-aos-delay="400">
+                    <div class="stars">
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                    </div>
+                    <span>5.0 · 168 отзывов на Яндекс</span>
+                </div>
+                
+                <div class="hero-actions" data-aos="fade-up" data-aos-delay="500">
+                    <button type="button" class="btn btn-primary btn-pill open-booking-modal">
+                        Записаться на приём <i data-lucide="arrow-right"></i>
+                    </button>
+                    <a href="#emergency" class="btn btn-secondary btn-outline btn-pill">
+                        Вызвать врача на дом <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="hero-subtext" data-aos="fade-up" data-aos-delay="600">
+                    🏠 Выезжаем в Подстепки, Приморский, Ягодное, Луначарский
+                </div>
+            </div>
+            <div class="hero-image-wrapper" data-aos="fade-left" data-aos-delay="300">
+                <img src="https://images.unsplash.com/photo-1599443015574-be5fe8a05783?q=80&w=2070&auto=format&fit=crop" alt="Ветеринар с собакой" class="hero-image" id="heroImage">
+                <div class="hero-image-overlay"></div>
+                
+                <!-- Floating badges on hero image -->
+                <div class="hero-float-badge hero-float-badge-1" data-aos="fade-up" data-aos-delay="800">
+                    <div class="badge-icon">
+                        <i data-lucide="heart"></i>
+                    </div>
+                    <div>
+                        <div class="badge-number">3 200+</div>
+                        <div class="badge-label">счастливых питомцев</div>
+                    </div>
+                </div>
+                <div class="hero-float-badge hero-float-badge-2" data-aos="fade-down" data-aos-delay="900">
+                    <div class="badge-number">8+</div>
+                    <div class="badge-label">лет опыта</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- СЕКЦИЯ: СТАТИСТИКА -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid" data-aos="fade-up">
+                <div class="stat-item">
+                    <div class="stat-icon"><i data-lucide="heart-pulse"></i></div>
+                    <div class="stat-number"><span class="counter" data-target="3200">0</span><span class="stat-suffix">+</span></div>
+                    <div class="stat-label">Пациентов вылечено</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon"><i data-lucide="calendar-days"></i></div>
+                    <div class="stat-number"><span class="counter" data-target="8">0</span><span class="stat-suffix"> лет</span></div>
+                    <div class="stat-label">Опыт работы</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon"><i data-lucide="star"></i></div>
+                    <div class="stat-number"><span class="counter" data-target="168">0</span><span class="stat-suffix">+</span></div>
+                    <div class="stat-label">Отзывов на Яндекс</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon"><i data-lucide="clock"></i></div>
+                    <div class="stat-number"><span class="counter" data-target="60">0</span><span class="stat-suffix"> мин</span></div>
+                    <div class="stat-label">Приедем на дом</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- СЕКЦИЯ 2: СКОРАЯ ПОМОЩЬ НА ДОМ -->
+    <section class="emergency" id="emergency">
+        <div class="container">
+            <div class="emergency-card" data-aos="fade-up">
+                <div class="emergency-icon-wrapper">
+                    <i data-lucide="ambulance" class="emergency-icon"></i>
+                </div>
+                <div class="emergency-info">
+                    <h2>Ветеринарная скорая — приедем в течение часа</h2>
+                    <p class="emergency-desc">Если питомцу плохо прямо сейчас — не везите его через весь город. Наш врач приедет к вам домой.</p>
+                    <ul class="emergency-list">
+                        <li><i data-lucide="check" class="check-icon"></i> Выезжаем в пригород: Подстепки, Приморский, Ягодное</li>
+                        <li><i data-lucide="check" class="check-icon"></i> Осмотр, анализы и назначение лечения на месте</li>
+                        <li><i data-lucide="check" class="check-icon"></i> Работаем без выходных</li>
+                    </ul>
+                    <div class="emergency-cta">
+                        <a href="tel:+79370640843" class="btn btn-primary btn-pill">
+                            Вызвать врача <i data-lucide="arrow-right"></i>
+                        </a>
+                        <span class="emergency-phone">+7 (937) 064-08-43</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- СЕКЦИЯ 3: ПОПУЛЯРНЫЕ УСЛУГИ И ЦЕНЫ -->
+    <section class="services section-padding" id="services">
+        <!-- Decorative paw prints -->
+        <i data-lucide="paw-print" class="deco-paw deco-paw-1"></i>
+        <i data-lucide="paw-print" class="deco-paw deco-paw-2"></i>
+
+        <div class="container">
+            <div class="section-header center">
+                <span class="badge" data-aos="fade-up">УСЛУГИ И ЦЕНЫ</span>
+                <h2 data-aos="fade-up" data-aos-delay="100">Прозрачные цены — никаких сюрпризов</h2>
+                <p class="subtitle muted" data-aos="fade-up" data-aos-delay="200">Все цены указаны окончательно, доплат нет</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Card 1 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon"><i data-lucide="sparkles"></i></div>
+                    <h3>Чистка зубов кошке</h3>
+                    <p class="muted">Ультразвуковая чистка под контролем врача</p>
+                    <div class="service-price">от 3 000 ₽</div>
+                    <button type="button" class="btn btn-secondary btn-outline btn-pill service-btn open-booking-modal" data-service="Чистка зубов кошке">
+                        Записаться <i data-lucide="arrow-right"></i>
+                    </button>
+                </div>
+                <!-- Card 2 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="service-icon"><i data-lucide="sparkles"></i></div>
+                    <h3>Чистка зубов собаке</h3>
+                    <p class="muted">Здоровые зубы — хороший аппетит и настроение</p>
+                    <div class="service-price">от 3 000 ₽</div>
+                    <button type="button" class="btn btn-secondary btn-outline btn-pill service-btn open-booking-modal" data-service="Чистка зубов собаке">
+                        Записаться <i data-lucide="arrow-right"></i>
+                    </button>
+                </div>
+                <!-- Card 3 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon"><i data-lucide="shield-check"></i></div>
+                    <h3>Вакцинация кошек</h3>
+                    <p class="muted">Защита от чумы, бешенства и других инфекций</p>
+                    <div class="service-price">от 1 640 ₽</div>
+                    <button type="button" class="btn btn-secondary btn-outline btn-pill service-btn open-booking-modal" data-service="Вакцинация кошек">
+                        Записаться <i data-lucide="arrow-right"></i>
+                    </button>
+                </div>
+                <!-- Card 4 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon"><i data-lucide="shield-check"></i></div>
+                    <h3>Вакцинация собак</h3>
+                    <p class="muted">Комплексная защита проверенными препаратами</p>
+                    <div class="service-price">от 2 000 ₽</div>
+                    <button type="button" class="btn btn-secondary btn-outline btn-pill service-btn open-booking-modal" data-service="Вакцинация собак">
+                        Записаться <i data-lucide="arrow-right"></i>
+                    </button>
+                </div>
+                <!-- Card 5 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="service-icon"><i data-lucide="scissors"></i></div>
+                    <h3>Стерилизация кошек</h3>
+                    <p class="muted">Безопасная операция под общим наркозом</p>
+                    <div class="service-price">2 800 ₽</div>
+                    <button type="button" class="btn btn-secondary btn-outline btn-pill service-btn open-booking-modal" data-service="Стерилизация кошек">
+                        Записаться <i data-lucide="arrow-right"></i>
+                    </button>
+                </div>
+                <!-- Card 6 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon"><i data-lucide="scissors"></i></div>
+                    <h3>Кастрация котов</h3>
+                    <p class="muted">Быстро, безопасно, с полным сопровождением</p>
+                    <div class="service-price">1 200 ₽</div>
+                    <button type="button" class="btn btn-secondary btn-outline btn-pill service-btn open-booking-modal" data-service="Кастрация котов">
+                        Записаться <i data-lucide="arrow-right"></i>
+                    </button>
+                </div>
+                <!-- Card 7 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon"><i data-lucide="scan"></i></div>
+                    <h3>Рентген</h3>
+                    <p class="muted">Переломы, инородные тела, органы — быстро и точно</p>
+                    <div class="service-price">от 500 ₽ <span class="text-sm">/ снимок</span></div>
+                    <button type="button" class="btn btn-secondary btn-outline btn-pill service-btn open-booking-modal" data-service="Рентген">
+                        Записаться <i data-lucide="arrow-right"></i>
+                    </button>
+                </div>
+                <!-- Card 8 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="service-icon"><i data-lucide="bug"></i></div>
+                    <h3>Обработка от клещей</h3>
+                    <p class="muted">Извлечение + обработка + консультация врача</p>
+                    <div class="service-price">от 1 000 ₽</div>
+                    <button type="button" class="btn btn-secondary btn-outline btn-pill service-btn open-booking-modal" data-service="Обработка от клещей">
+                        Записаться <i data-lucide="arrow-right"></i>
+                    </button>
+                </div>
+                <!-- Card 9 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon"><i data-lucide="stethoscope"></i></div>
+                    <h3>Приём ветеринара</h3>
+                    <p class="muted">Осмотр, анализы, назначение лечения</p>
+                    <div class="service-price">от 500 ₽</div>
+                    <button type="button" class="btn btn-secondary btn-outline btn-pill service-btn open-booking-modal" data-service="Приём ветеринара">
+                        Записаться <i data-lucide="arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- СЕКЦИЯ 4: ОБОРУДОВАНИЕ — Bento Grid -->
+    <section class="equipment section-padding bg-alt">
+        <i data-lucide="paw-print" class="deco-paw deco-paw-3"></i>
+
+        <div class="container">
+            <div class="section-header center">
+                <span class="badge" data-aos="fade-up">ДИАГНОСТИКА</span>
+                <h2 data-aos="fade-up" data-aos-delay="100">Ставим точный диагноз — не гадаем</h2>
+                <p class="subtitle muted" data-aos="fade-up" data-aos-delay="200">Всё необходимое оборудование — в одной клинике, без направлений в другие места</p>
+            </div>
+            
+            <div class="bento-grid" data-aos="fade-up" data-aos-delay="200">
+                <!-- Bento: Featured card (large) -->
+                <div class="bento-card bento-featured">
+                    <div class="bento-card-inner">
+                        <div class="bento-glow"></div>
+                        <div class="bento-badge">Главное</div>
+                        <div class="bento-icon-lg">
+                            <i data-lucide="activity"></i>
+                        </div>
+                        <h3>УЗИ-диагностика</h3>
+                        <p>Обследование внутренних органов без стресса для питомца. Результат — сразу на приёме.</p>
+                        <div class="bento-metric">
+                            <div class="bento-metric-header">
+                                <span>Точность диагностики</span>
+                                <span class="bento-metric-value">98%</span>
+                            </div>
+                            <div class="bento-progress">
+                                <div class="bento-progress-bar" style="--progress: 98%"></div>
+                            </div>
+                        </div>
+                        <div class="bento-tags">
+                            <span class="bento-tag">Безболезненно</span>
+                            <span class="bento-tag">Без наркоза</span>
+                            <span class="bento-tag">Результат сразу</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bento: Card 2 -->
+                <div class="bento-card bento-sm">
+                    <div class="bento-card-inner">
+                        <div class="bento-icon-wrap">
+                            <i data-lucide="scan-line"></i>
+                        </div>
+                        <h3>Рентгенография</h3>
+                        <p>Переломы, воспаления, инородные тела — быстро и точно.</p>
+                        <div class="bento-price-tag">
+                            <span class="bento-price-label">от</span>
+                            <span class="bento-price-amount">500 ₽</span>
+                            <span class="bento-price-label">/ снимок</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bento: Card 3 -->
+                <div class="bento-card bento-sm">
+                    <div class="bento-card-inner">
+                        <div class="bento-icon-wrap">
+                            <i data-lucide="flask-conical"></i>
+                        </div>
+                        <h3>Лабораторные анализы</h3>
+                        <p>Общий и биохимический анализ крови, исследования на инфекции и паразиты.</p>
+                        <div class="bento-check-list">
+                            <div class="bento-check"><i data-lucide="check-circle"></i> Анализ крови</div>
+                            <div class="bento-check"><i data-lucide="check-circle"></i> Инфекции</div>
+                            <div class="bento-check"><i data-lucide="check-circle"></i> Паразиты</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- СЕКЦИЯ 5: НАШ ПОДХОД — Timeline -->
+    <section class="approach section-padding" id="approach">
+        <i data-lucide="paw-print" class="deco-paw deco-paw-1"></i>
+
+        <div class="container">
+            <div class="section-header center">
+                <span class="badge" data-aos="fade-up">КАК МЫ РАБОТАЕМ</span>
+                <h2 data-aos="fade-up" data-aos-delay="100">Без очередей, без стресса, без скрытых цен</h2>
+                <p class="subtitle muted" data-aos="fade-up" data-aos-delay="200">4 принципа, которые отличают нас от других клиник</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-line"></div>
+
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+                    <div class="timeline-number"><span>01</span></div>
+                    <div class="timeline-content">
+                        <div class="timeline-icon"><i data-lucide="calendar-check"></i></div>
+                        <h3>Приём по записи</h3>
+                        <p class="muted">Вы приходите в назначенное время. Никаких двухчасовых ожиданий в душном коридоре.</p>
+                        <div class="timeline-highlight">
+                            <i data-lucide="clock"></i>
+                            <span>Среднее ожидание: <strong>0 минут</strong></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item timeline-item-right" data-aos="fade-left" data-aos-delay="200">
+                    <div class="timeline-number"><span>02</span></div>
+                    <div class="timeline-content">
+                        <div class="timeline-icon"><i data-lucide="heart-handshake"></i></div>
+                        <h3>Бережный наркоз</h3>
+                        <p class="muted">Современные препараты, постоянное наблюдение врача во время и после операции.</p>
+                        <div class="timeline-highlight">
+                            <i data-lucide="shield-check"></i>
+                            <span>Мониторинг: <strong>24/7</strong></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
+                    <div class="timeline-number"><span>03</span></div>
+                    <div class="timeline-content">
+                        <div class="timeline-icon"><i data-lucide="sparkles"></i></div>
+                        <h3>Чистота и порядок</h3>
+                        <p class="muted">Стерильные инструменты, чистые залы. Клиенты отмечают это в каждом отзыве.</p>
+                        <div class="timeline-highlight">
+                            <i data-lucide="star"></i>
+                            <span>Оценка чистоты: <strong>5.0 / 5.0</strong></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item timeline-item-right" data-aos="fade-left" data-aos-delay="400">
+                    <div class="timeline-number"><span>04</span></div>
+                    <div class="timeline-content">
+                        <div class="timeline-icon"><i data-lucide="badge-check"></i></div>
+                        <h3>Честные цены</h3>
+                        <p class="muted">Цена озвучивается до процедуры. Никаких доплат и неожиданных счетов.</p>
+                        <div class="timeline-highlight">
+                            <i data-lucide="percent"></i>
+                            <span>Скрытых доплат: <strong>0%</strong></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- СЕКЦИЯ 6: ОТЗЫВЫ -->
+    <section class="reviews section-padding bg-alt" id="reviews">
+        <i data-lucide="paw-print" class="deco-paw deco-paw-2"></i>
+
+        <div class="container">
+            <div class="section-header center">
+                <span class="badge" data-aos="fade-up">ОТЗЫВЫ</span>
+                <h2 data-aos="fade-up" data-aos-delay="100"><span id="reviews-counter" class="counter" data-target="168">0</span> историй доверия</h2>
+                <div class="rating-large" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stars">
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                    </div>
+                    <span>5.0 на Яндекс.Картах</span>
+                </div>
+            </div>
+            
+            <div class="swiper reviews-swiper" data-aos="fade-up" data-aos-delay="300">
+                <div class="swiper-wrapper">
+                    <!-- Review 1 -->
+                    <div class="swiper-slide review-card">
+                        <div class="review-header">
+                            <div class="stars sm">
+                                <i data-lucide="star" class="star-filled"></i><i data-lucide="star" class="star-filled"></i><i data-lucide="star" class="star-filled"></i><i data-lucide="star" class="star-filled"></i><i data-lucide="star" class="star-filled"></i>
+                            </div>
+                            <div class="review-author">Антон Белов, <span class="muted">28 июня</span></div>
+                        </div>
+                        <p class="review-text">"Прием начался вовремя — хорошая организация. Врачи проявили высокий профессионализм. Доктор внимательно выслушал, провел осмотр и назначил лечение. Чистота и уют в клинике. «Дядя Фёдор» — место, где о животных заботятся с душой."</p>
+                        <i data-lucide="paw-print" class="review-watermark"></i>
+                    </div>
+                    <!-- Review 2 -->
+                    <div class="swiper-slide review-card">
+                        <div class="review-header">
+                            <div class="stars sm">
+                                <i data-lucide="star" class="star-filled"></i><i data-lucide="star" class="star-filled"></i><i data-lucide="star" class="star-filled"></i><i data-lucide="star" class="star-filled"></i><i data-lucide="star" class="star-filled"></i>
+                            </div>
+                            <div class="review-author">Таня К., <span class="muted">18 июня</span></div>
+                        </div>
+                        <p class="review-text">"Очень хорошая клиника, два раза собака наедалась песка, и оба раза доктора её спасали. Чуткое отношение к животному и хозяину. Есть аппарат УЗИ — это немаловажно. 100% рекомендую."</p>
+                        <i data-lucide="paw-print" class="review-watermark"></i>
+                    </div>
+                    <!-- Review 3 -->
+                    <div class="swiper-slide review-card">
+                        <div class="review-header">
+                            <div class="stars sm">
+                                <i data-lucide="star" class="star-filled"></i><i data-lucide="star" class="star-filled"></i><i data-lucide="star" class="star-filled"></i><i data-lucide="star" class="star-filled"></i><i data-lucide="star" class="star-filled"></i>
+                            </div>
+                            <div class="review-author">Инкогнито 7385, <span class="muted">14 июня</span></div>
+                        </div>
+                        <p class="review-text">"Всегда отзывчивые, грамотные врачи. Все анализы, обследования, препараты есть на месте. Прием по записи — нет очереди. В другой клинике ждали два с лишним часа. Однозначно рекомендую!"</p>
+                        <i data-lucide="paw-print" class="review-watermark"></i>
+                    </div>
+                    <!-- Review 4 -->
+                    <div class="swiper-slide review-card">
+                        <div class="review-header">
+                            <div class="stars sm">
+                                <i data-lucide="star" class="star-filled"></i><i data-lucide="star" class="star-filled"></i><i data-lucide="star" class="star-filled"></i><i data-lucide="star" class="star-filled"></i><i data-lucide="star" class="star-filled"></i>
+                            </div>
+                            <div class="review-author">Pavel Grinenko, <span class="muted">15 июня</span></div>
+                        </div>
+                        <p class="review-text">"Очень понравилось. Близко к дому. Приветливый персонал. Делали чистку зубов собаке. Всё прошло отлично. Рекомендуем."</p>
+                        <i data-lucide="paw-print" class="review-watermark"></i>
+                    </div>
+                    <!-- Review 5 -->
+                    <div class="swiper-slide review-card">
+                        <div class="review-header">
+                            <div class="stars sm">
+                                <i data-lucide="star" class="star-filled"></i><i data-lucide="star" class="star-filled"></i><i data-lucide="star" class="star-filled"></i><i data-lucide="star" class="star-filled"></i><i data-lucide="star" class="star-filled"></i>
+                            </div>
+                            <div class="review-author">Татьяна У., <span class="muted">19 июня</span></div>
+                        </div>
+                        <p class="review-text">"Хожу сюда с самого начала как в доме появилась собачка. Замечательный персонал, всегда поможет и всё объяснит. В клинике всегда чисто и приятно находиться."</p>
+                        <i data-lucide="paw-print" class="review-watermark"></i>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- СЕКЦИЯ 7: КОНТАКТЫ И КАРТА -->
+    <section class="contacts section-padding" id="contacts">
+        <div class="container">
+            <div class="contacts-wrapper">
+                <div class="contacts-info" data-aos="fade-right">
+                    <span class="badge">КАК НАС НАЙТИ</span>
+                    <h2>Удобно добраться из пригорода</h2>
+                    
+                    <ul class="contacts-list">
+                        <li>
+                            <div class="ci-icon"><i data-lucide="map-pin"></i></div>
+                            <div class="ci-text">Тольятти, Автозаводский район</div>
+                        </li>
+                        <li>
+                            <div class="ci-icon"><i data-lucide="phone"></i></div>
+                            <div class="ci-text">+7 (937) 064-08-43</div>
+                        </li>
+                        <li>
+                            <div class="ci-icon"><i data-lucide="clock"></i></div>
+                            <div class="ci-text">Ежедневно с 09:00 до 21:00</div>
+                        </li>
+                        <li>
+                            <div class="ci-icon"><i data-lucide="car"></i></div>
+                            <div class="ci-text">Есть парковка рядом с клиникой</div>
+                        </li>
+                    </ul>
+                    
+                    <div class="contacts-actions">
+                        <a href="tel:+79370640843" class="btn btn-primary btn-pill">
+                            Позвонить <i data-lucide="phone"></i>
+                        </a>
+                        <a href="#" class="btn btn-secondary btn-outline btn-pill">
+                            Написать в WhatsApp <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contacts-map" data-aos="fade-left">
+                    <div class="map-placeholder">
+                        <i data-lucide="map"></i>
+                        <p>Яндекс.Карты • Автозаводский район, Тольятти</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ФИНАЛЬНЫЙ CTA -->
+    <section class="final-cta">
+        <div class="container center" data-aos="zoom-in">
+            <h2>Питомцу плохо? Не ждите — запишитесь сейчас</h2>
+            <p>Принимаем по записи без очередей. Выезжаем на дом.</p>
+            <button type="button" class="btn btn-cta btn-pill mt-4 open-booking-modal">
+                Записаться на приём <i data-lucide="paw-print"></i>
+            </button>
+            <div class="cta-phone">+7 (937) 064-08-43</div>
+        </div>
+    </section>
+
+    <!-- ФУТЕР -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">Дядя Фёдор <i data-lucide="paw-print"></i></div>
+                    <p>Ветеринарная клиника в Тольятти. Лечение с заботой и вниманием к каждому питомцу.</p>
+                </div>
+                
+                <div class="footer-nav">
+                    <a href="#services">Услуги</a>
+                    <a href="#services">Цены</a>
+                    <a href="#approach">О клинике</a>
+                    <a href="#reviews">Отзывы</a>
+                    <a href="#contacts">Контакты</a>
+                </div>
+                
+                <div class="footer-contacts">
+                    <p>Тольятти, Автозаводский район</p>
+                    <p>+7 (937) 064-08-43</p>
+                    <p>Ежедневно 09:00 — 21:00</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ветклиника «Дядя Фёдор». Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- МОДАЛЬНАЯ ФОРМА ЗАПИСИ -->
+    <div class="modal-overlay" id="bookingModalOverlay">
+        <div class="modal" id="bookingModal">
+            <button class="modal-close" id="modalClose" aria-label="Закрыть">
+                <i data-lucide="x"></i>
+            </button>
+            <div class="modal-header">
+                <div class="modal-icon">
+                    <i data-lucide="calendar-check"></i>
+                </div>
+                <h2>Запись на приём</h2>
+                <p class="muted">Заполните форму — мы перезвоним в течение 15 минут</p>
+            </div>
+            <form class="modal-form" id="bookingForm">
+                <div class="form-group">
+                    <label for="booking-name">Ваше имя <span class="required">*</span></label>
+                    <div class="input-wrapper">
+                        <i data-lucide="user" class="input-icon"></i>
+                        <input type="text" id="booking-name" name="name" placeholder="Как вас зовут?" required autocomplete="name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="booking-phone">Телефон <span class="required">*</span></label>
+                    <div class="input-wrapper">
+                        <i data-lucide="phone" class="input-icon"></i>
+                        <input type="tel" id="booking-phone" name="phone" placeholder="+7 (___) ___-__-__" required autocomplete="tel">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="booking-service">Услуга <span class="required">*</span></label>
+                    <div class="input-wrapper">
+                        <i data-lucide="stethoscope" class="input-icon"></i>
+                        <select id="booking-service" name="service" required>
+                            <option value="" disabled selected>Выберите услугу</option>
+                            <option value="Чистка зубов кошке">Чистка зубов кошке — от 3 000 ₽</option>
+                            <option value="Чистка зубов собаке">Чистка зубов собаке — от 3 000 ₽</option>
+                            <option value="Вакцинация кошек">Вакцинация кошек — от 1 640 ₽</option>
+                            <option value="Вакцинация собак">Вакцинация собак — от 2 000 ₽</option>
+                            <option value="Стерилизация кошек">Стерилизация кошек — 2 800 ₽</option>
+                            <option value="Кастрация котов">Кастрация котов — 1 200 ₽</option>
+                            <option value="Рентген">Рентген — от 500 ₽</option>
+                            <option value="Обработка от клещей">Обработка от клещей — от 1 000 ₽</option>
+                            <option value="Приём ветеринара">Приём ветеринара — от 500 ₽</option>
+                            <option value="Вызов врача на дом">Вызов врача на дом</option>
+                            <option value="Другое">Другое</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="booking-note">Примечание <span class="optional">(по желанию)</span></label>
+                    <div class="input-wrapper">
+                        <i data-lucide="message-square" class="input-icon textarea-icon"></i>
+                        <textarea id="booking-note" name="note" placeholder="Опишите кратко ситуацию или задайте вопрос" rows="3"></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-pill modal-submit">
+                    Отправить заявку <i data-lucide="send"></i>
+                </button>
+                <p class="form-disclaimer">Нажимая кнопку, вы соглашаетесь на обработку персональных данных</p>
+            </form>
+            <!-- Success state -->
+            <div class="modal-success" id="modalSuccess" style="display: none;">
+                <div class="success-icon">
+                    <i data-lucide="check-circle"></i>
+                </div>
+                <h3>Заявка отправлена!</h3>
+                <p>Мы перезвоним вам в ближайшее время для подтверждения записи.</p>
+                <button type="button" class="btn btn-primary btn-pill" id="modalSuccessClose">Отлично!</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- BACK TO TOP -->
+    <button class="back-to-top" id="backToTop" aria-label="Наверх">
+        <i data-lucide="chevron-up"></i>
+    </button>
+
+    <!-- Скрипты -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
