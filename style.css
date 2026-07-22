@@ -4,30 +4,29 @@
    ========================================================================== */
 :root {
     /* Colors */
-    --bg-body: #F8FAFB;
-    --bg-surface: #FFFFFF;
-    --bg-surface-alt: #F0F4F8;
-    --accent: #059669;
-    --accent-dark: #047857;
-    --accent-secondary: #0D9488;
-    --accent-light: rgba(5, 150, 105, 0.08);
-    --accent-glow: rgba(5, 150, 105, 0.25);
-    --gradient-accent: linear-gradient(135deg, #059669 0%, #0D9488 50%, #06B6D4 100%);
-    --gradient-accent-subtle: linear-gradient(135deg, rgba(5,150,105,0.08) 0%, rgba(13,148,136,0.05) 100%);
-    --gradient-hero: linear-gradient(135deg, #059669 0%, #0D9488 40%, #06B6D4 100%);
-    --text-main: #0F172A;
-    --text-secondary: #334155;
-    --text-muted: #64748B;
-    --border-color: #E2E8F0;
-    --border-color-light: #F1F5F9;
+    --bg-body: #0D0D12;
+    --bg-surface: #1E1E28;
+    --bg-surface-alt: #16161F;
+    --accent: #6366F1;
+    --accent-dark: #4F46E5;
+    --accent-light: rgba(99, 102, 241, 0.08);
+    --accent-glow: rgba(99, 102, 241, 0.25);
+    --gradient-accent: linear-gradient(135deg, #6366F1 0%, #818CF8 50%, #A5B4FC 100%);
+    --gradient-accent-subtle: linear-gradient(135deg, rgba(99,102,241,0.08) 0%, rgba(129,140,248,0.05) 100%);
+    --gradient-hero: linear-gradient(135deg, #6366F1 0%, #818CF8 40%, #A5B4FC 100%);
+    --text-main: #F3F4F6;
+    --text-secondary: #9CA3AF;
+    --text-muted: #6B7280;
+    --border-color: #374151;
+    --border-color-light: #1F2937;
     --star-color: #FBBF24;
     --footer-bg: #0F172A;
     --emergency-red: #EF4444;
     --emergency-red-glow: rgba(239, 68, 68, 0.3);
 
     /* Typography */
-    --font-display: 'DM Serif Display', serif;
-    --font-body: 'DM Sans', sans-serif;
+    --font-display: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
     
     /* Fluid Type Sizes */
     --text-xs: clamp(0.6875rem, 0.65rem + 0.188vw, 0.75rem);
