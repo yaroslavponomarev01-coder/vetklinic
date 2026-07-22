@@ -154,6 +154,7 @@
 
 html {
     scroll-behavior: initial; /* Lenis handles this */
+    overflow-x: hidden;
 }
 
 body {
@@ -2021,7 +2022,9 @@ img {
     
     .hero-image-wrapper {
         width: 100%;
+        max-width: 100%;
         flex: 1;
+        overflow: hidden;
     }
     
     .hero-image {
@@ -2084,6 +2087,10 @@ img {
         display: none;
     }
 
+    .nav-actions .btn {
+        display: none;
+    }
+
     .hamburger {
         display: flex;
     }
@@ -2104,18 +2111,25 @@ img {
     
     .timeline-item, .timeline-item-right {
         justify-content: flex-start;
-        padding-left: 80px;
+        padding-left: 60px;
         padding-right: 0;
     }
     
     .timeline-number {
-        left: 32px;
+        left: 20px;
     }
     
     .timeline-item:not(.timeline-item-right) .timeline-content,
     .timeline-item-right .timeline-content {
         margin: 0;
         width: 100%;
+        max-width: 100%;
+        padding: 24px;
+        box-sizing: border-box;
+    }
+
+    .timeline-highlight {
+        flex-wrap: wrap;
     }
     
     .footer-grid {
@@ -2137,6 +2151,10 @@ img {
 }
 
 @media (max-width: 480px) {
+    .container {
+        padding: 0 16px;
+    }
+
     .services-grid {
         grid-template-columns: 1fr;
     }
