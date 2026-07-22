@@ -426,9 +426,9 @@ img {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(248, 250, 251, 0.8);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background-color: rgba(13, 13, 18, 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     z-index: 1000;
     transition: all var(--transition-smooth);
     padding: 20px 0;
@@ -437,9 +437,9 @@ img {
 
 .navbar.scrolled {
     padding: 12px 0;
-    background-color: rgba(255, 255, 255, 0.85);
-    border-bottom: 1px solid rgba(226, 232, 240, 0.5);
-    box-shadow: 0 4px 30px -4px rgba(0, 0, 0, 0.06);
+    background-color: rgba(13, 13, 18, 0.85);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 30px -4px rgba(0, 0, 0, 0.2);
 }
 
 .nav-container {
@@ -563,11 +563,11 @@ img {
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(15, 23, 42, 0.5);
+    background: rgba(13, 13, 18, 0.7);
     backdrop-filter: blur(8px);
     z-index: 999;
     opacity: 0;
-    transition: opacity var(--transition-smooth);
+    transition: opacity 0.3s ease;
 }
 
 .mobile-nav-overlay.active {
@@ -578,18 +578,21 @@ img {
     display: none;
     position: fixed;
     top: 0;
-    right: -300px;
+    right: 0;
     width: 300px;
     height: 100vh;
-    background: var(--bg-surface);
+    background: rgba(30, 30, 40, 0.95);
+    backdrop-filter: blur(20px);
     z-index: 1000;
     padding: 100px 32px 32px;
-    transition: right var(--transition-smooth);
-    box-shadow: -8px 0 32px rgba(0,0,0,0.1);
+    transform: translateX(100%);
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    box-shadow: -8px 0 32px rgba(0,0,0,0.4);
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .mobile-nav.active {
-    right: 0;
+    transform: translateX(0);
 }
 
 .mobile-nav a {
