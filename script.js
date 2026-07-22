@@ -456,25 +456,38 @@ document.addEventListener('DOMContentLoaded', () => {
         bookingForm.addEventListener('submit', (e) => {
             e.preventDefault();
 
-            const formData = new FormData(bookingForm);
-            const data = {
-                name: formData.get('name'),
-                phone: formData.get('phone'),
-                service: formData.get('service'),
-                note: formData.get('note') || '',
-            };
+            const submitBtn = bookingForm.querySelector('button[type="submit"]');
+            const originalBtnContent = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = 'Отправка <i data-lucide="loader" class="spin"></i>';
+            try {
+                if (typeof lucide !== 'undefined') lucide.createIcons();
+            } catch (e) {}
 
-            // Log the data (in production — send to server/Telegram/email)
-            console.log('📋 Новая заявка:', data);
+            setTimeout(() => {
+                const formData = new FormData(bookingForm);
+                const data = {
+                    name: formData.get('name'),
+                    phone: formData.get('phone'),
+                    service: formData.get('service'),
+                    note: formData.get('note') || '',
+                };
 
-            // Show success state
-            bookingForm.style.display = 'none';
-            if (modalSuccess) {
-                modalSuccess.style.display = 'block';
-                try {
-                    if (typeof lucide !== 'undefined') lucide.createIcons();
-                } catch (e) {}
-            }
+                // Log the data (in production — send to server/Telegram/email)
+                console.log('📋 Новая заявка:', data);
+
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnContent;
+
+                // Show success state
+                bookingForm.style.display = 'none';
+                if (modalSuccess) {
+                    modalSuccess.style.display = 'block';
+                    try {
+                        if (typeof lucide !== 'undefined') lucide.createIcons();
+                    } catch (e) {}
+                }
+            }, 1000); // Simulate network request
         });
     }
 
