@@ -671,17 +671,16 @@ img {
 }
 
 .hero-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
     align-items: center;
-    justify-content: space-between;
     gap: 60px;
     position: relative;
     z-index: 1;
 }
 
 .hero-content {
-    flex: 0 0 52%;
-    max-width: 52%;
+    grid-column: span 7;
 }
 
 .hero h1 {
@@ -754,7 +753,7 @@ img {
 }
 
 .hero-image-wrapper {
-    flex: 0 0 45%;
+    grid-column: span 5;
     position: relative;
 }
 
@@ -1971,6 +1970,7 @@ img {
    ========================================================================== */
 @media (max-width: 992px) {
     .hero-container {
+        display: flex;
         flex-direction: column;
         text-align: center;
     }
