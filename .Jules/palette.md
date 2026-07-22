@@ -1,0 +1,3 @@
+## 2024-07-22 - Add loading spinner to async submit button
+**Learning:** Adding a simulated loading state (spinner and disabled state) to the form submit button prevents multi-clicks and provides immediate visual feedback. I learned that for Lucide icons dynamically injected, we need to re-initialize them by calling `lucide.createIcons()` immediately after updating the button's innerHTML.
+**Action:** Always provide loading states for async operations. When injecting Lucide icons dynamically in this app, ensure `lucide.createIcons()` is called right after DOM updates to render the icons correctly.

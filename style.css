@@ -144,6 +144,11 @@
     100% { transform: scale(4); opacity: 0; }
 }
 
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
 /* ==========================================================================
    Reset & Base
    ========================================================================== */
@@ -415,8 +420,12 @@ img {
     transition: transform var(--transition-smooth);
 }
 
-.btn:hover i {
+.btn:hover i:not(.spin) {
     transform: translateX(3px);
+}
+
+.spin {
+    animation: spin 1s linear infinite;
 }
 
 /* ==========================================================================
